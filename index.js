@@ -1,8 +1,16 @@
-var katzDeliLine = []
 function takeANumber(katzDeliLine, name) {
-  katzDeliLine.push(`${name}`);
-  return(`Welcome, ${name}. You are number ${katzDeliLine.length} in line.`);
+  
+  katzDeliLine.push(name)
+  let welcomeMessage = `Welcome, ${name}. You are number ${katzDeliLine.length} in line.`
+  return welcomeMessage
+
 }
+
+let currentNumber = takeANumber(['frank', 'kyle', 'bob'], 'joe');
+console.log(currentNumber)
+
+
+
 function nowServing(katzDeliLine) {
   let i = 0;
   while (i < katzDeliLine.length) {
@@ -11,9 +19,10 @@ function nowServing(katzDeliLine) {
 if (katzDeliLine.length === 0) {
   return "There is nobody waiting to be served!"
 }
-else
+else {
 return (`Currently serving ${katzDeliLine.shift()}.`)
   }
+}
 var line = []
 
 function currentLine(katzDeliLine) {
